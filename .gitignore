@@ -1,0 +1,6 @@
+# Compiled files
+*.o
+main
+
+# macOS
+.DS_Store

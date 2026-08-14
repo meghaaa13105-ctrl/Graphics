@@ -1,0 +1,31 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build OpenGL",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "main.cpp",
+                "src/glad.c",
+                "-I./Libraries/include",
+                "-I/opt/homebrew/include",
+                "-L/opt/homebrew/lib",
+                "-lglfw",
+                "-framework", "OpenGL",
+                "-framework", "Cocoa",
+                "-framework", "IOKit",
+                "-framework", "CoreVideo",
+                "-o",
+                "ComputerGraphics"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
